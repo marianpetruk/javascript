@@ -6,7 +6,7 @@
 
 [For the ES5-only guide click here](es5/).
 
-## Зміст
+## <a name='TOC'>Зміст</a>
 
   1. [Типи](#types)
   1. [Посилання](#references)
