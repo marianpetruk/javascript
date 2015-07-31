@@ -1,53 +1,53 @@
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/airbnb/javascript?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-# Airbnb JavaScript Style Guide() {
+# Airbnb JavaScript гайд стилю() {
 
-*A mostly reasonable approach to JavaScript*
+*Найбільш розумний підхід до JavaScript*
 
 [For the ES5-only guide click here](es5/).
 
-## Table of Contents
+## Зміст
 
-  1. [Types](#types)
-  1. [References](#references)
-  1. [Objects](#objects)
-  1. [Arrays](#arrays)
-  1. [Destructuring](#destructuring)
-  1. [Strings](#strings)
-  1. [Functions](#functions)
-  1. [Arrow Functions](#arrow-functions)
-  1. [Constructors](#constructors)
-  1. [Modules](#modules)
-  1. [Iterators and Generators](#iterators-and-generators)
-  1. [Properties](#properties)
-  1. [Variables](#variables)
-  1. [Hoisting](#hoisting)
-  1. [Comparison Operators & Equality](#comparison-operators--equality)
-  1. [Blocks](#blocks)
-  1. [Comments](#comments)
-  1. [Whitespace](#whitespace)
-  1. [Commas](#commas)
-  1. [Semicolons](#semicolons)
-  1. [Type Casting & Coercion](#type-casting--coercion)
-  1. [Naming Conventions](#naming-conventions)
-  1. [Accessors](#accessors)
-  1. [Events](#events)
+  1. [Типи](#types)
+  1. [Посилання](#references)
+  1. [Об'єкти](#objects)
+  1. [Масиви](#arrays)
+  1. [Деструктуризація](#destructuring)
+  1. [Стрічки](#strings)
+  1. [Функції](#functions)
+  1. [Стрілкові Функції](#arrow-functions)
+  1. [Конструктори](#constructors)
+  1. [Модулі](#modules)
+  1. [Ітератори та Генератори](#iterators-and-generators)
+  1. [Властивості](#properties)
+  1. [Змінні](#variables)
+  1. [Області видимості](#hoisting)
+  1. [Оператори Порівняння та Рівності](#comparison-operators--equality)
+  1. [Блоки](#blocks)
+  1. [Коментарі](#comments)
+  1. [Пробіли](#whitespace)
+  1. [Коми](#commas)
+  1. [Крапки з комою](#semicolons)
+  1. [Перетворення Типів](#type-casting--coercion)
+  1. [Правила найменування](#naming-conventions)
+  1. [Методи Доступу](#accessors)
+  1. [Події](#events)
   1. [jQuery](#jquery)
-  1. [ECMAScript 5 Compatibility](#ecmascript-5-compatibility)
-  1. [ECMAScript 6 Styles](#ecmascript-6-styles)
-  1. [Testing](#testing)
-  1. [Performance](#performance)
-  1. [Resources](#resources)
-  1. [In the Wild](#in-the-wild)
-  1. [Translation](#translation)
-  1. [The JavaScript Style Guide Guide](#the-javascript-style-guide-guide)
-  1. [Chat With Us About Javascript](#chat-with-us-about-javascript)
-  1. [Contributors](#contributors)
-  1. [License](#license)
+  1. [Сумісність з ECMAScript 5](#ecmascript-5-compatibility)
+  1. [Стилі ECMAScript 6](#ecmascript-6-styles)
+  1. [Тестування](#testing)
+  1. [Продуктивність](#Продуктивність)
+  1. [Ресурси](#resources)
+  1. [В реальному світі](#in-the-wild)
+  1. [Переклади](#translation)
+  1. [Гайд по написанню гайду стилю по JavaScript](#the-javascript-style-guide-guide)
+  1. [Чат з нами про Javascript](#chat-with-us-about-javascript)
+  1. [Вкладники](#contributors)
+  1. [Ліцензія](#license)
 
-## Types
+## Типи
 
-  - [1.1](#1.1) <a name='1.1'></a> **Primitives**: When you access a primitive type you work directly on its value.
+  - [1.1](#1.1) <a name='1.1'></a> **Прості типи**: Коли ви взаємодієте з простим типом, ви взаємодієте безпосередньо з його значенням в пам'яті.
 
     + `string`
     + `number`
@@ -63,7 +63,7 @@
 
     console.log(foo, bar); // => 1, 9
     ```
-  - [1.2](#1.2) <a name='1.2'></a> **Complex**: When you access a complex type you work on a reference to its value.
+  - [1.2](#1.2) <a name='1.2'></a> **Складні типи**: Коли ви взаємодієте з складним типом, ви взаємодієте з посиланням на його значення в пам'яті.
 
     + `object`
     + `array`
@@ -78,13 +78,13 @@
     console.log(foo[0], bar[0]); // => 9, 9
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
-## References
+## Посилання
 
-  - [2.1](#2.1) <a name='2.1'></a> Use `const` for all of your references; avoid using `var`.
+  - [2.1](#2.1) <a name='2.1'></a> Використовуйте `const` for all of your references; avoid using `var`.
 
-  > Why? This ensures that you can't reassign your references (mutation), which can lead to bugs and difficult to comprehend code.
+  > ? This ensures that you can't reassign your references (mutation), which can lead to bugs and difficult to comprehend code.
 
     ```javascript
     // bad
@@ -98,7 +98,7 @@
 
   - [2.2](#2.2) <a name='2.2'></a> If you must mutate references, use `let` instead of `var`.
 
-  > Why? `let` is block-scoped rather than function-scoped like `var`.
+  > Чому? `let` is block-scoped rather than function-scoped like `var`.
 
     ```javascript
     // bad
@@ -126,7 +126,7 @@
     console.log(b); // ReferenceError
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 ## Objects
 
@@ -178,7 +178,7 @@
   <a name="es6-computed-properties"></a>
   - [3.4](#3.4) <a name='3.4'></a> Use computed property names when creating objects with dynamic property names.
 
-  > Why? They allow you to define all the properties of an object in one place.
+  > Чому? They allow you to define all the properties of an object in one place.
 
     ```javascript
 
@@ -227,7 +227,7 @@
   <a name="es6-object-concise"></a>
   - [3.6](#3.6) <a name='3.6'></a> Use property value shorthand.
 
-  > Why? It is shorter to write and descriptive.
+  > Чому? It is shorter to write and descriptive.
 
     ```javascript
     const lukeSkywalker = 'Luke Skywalker';
@@ -245,7 +245,7 @@
 
   - [3.7](#3.7) <a name='3.7'></a> Group your shorthand properties at the beginning of your object declaration.
 
-  > Why? It's easier to tell which properties are using the shorthand.
+  > Чому? It's easier to tell which properties are using the shorthand.
 
     ```javascript
     const anakinSkywalker = 'Anakin Skywalker';
@@ -272,7 +272,7 @@
     };
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 ## Arrays
 
@@ -321,13 +321,13 @@
     const nodes = Array.from(foo);
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 ## Destructuring
 
   - [5.1](#5.1) <a name='5.1'></a> Use object destructuring when accessing and using multiple properties of an object.
 
-  > Why? Destructuring saves you from creating temporary references for those properties.
+  > Чому? Destructuring saves you from creating temporary references for those properties.
 
     ```javascript
     // bad
@@ -365,7 +365,7 @@
 
   - [5.3](#5.3) <a name='5.3'></a> Use object destructuring for multiple return values, not array destructuring.
 
-  > Why? You can add new properties over time or change the order of things without breaking call sites.
+  > Чому? You can add new properties over time or change the order of things without breaking call sites.
 
     ```javascript
     // bad
@@ -388,7 +388,7 @@
     ```
 
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 ## Strings
 
@@ -403,7 +403,7 @@
     ```
 
   - [6.2](#6.2) <a name='6.2'></a> Strings longer than 100 characters should be written across multiple lines using string concatenation.
-  - [6.3](#6.3) <a name='6.3'></a> Note: If overused, long strings with concatenation could impact performance. [jsPerf](http://jsperf.com/ya-string-concat) & [Discussion](https://github.com/airbnb/javascript/issues/40).
+  - [6.3](#6.3) <a name='6.3'></a> Note: If overused, long strings with concatenation could impact Продуктивність. [jsPerf](http://jsperf.com/ya-string-concat) & [Discussion](https://github.com/airbnb/javascript/issues/40).
 
     ```javascript
     // bad
@@ -424,7 +424,7 @@
   <a name="es6-template-literals"></a>
   - [6.4](#6.4) <a name='6.4'></a> When programmatically building up strings, use template strings instead of concatenation.
 
-  > Why? Template strings give you a readable, concise syntax with proper newlines and string interpolation features.
+  > Чому? Template strings give you a readable, concise syntax with proper newlines and string interpolation features.
 
     ```javascript
     // bad
@@ -444,14 +444,14 @@
     ```
   - [6.5](#6.5) <a name='6.5'></a> Never use eval() on a string, it opens too many vulnerabilities.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 
 ## Functions
 
   - [7.1](#7.1) <a name='7.1'></a> Use function declarations instead of function expressions.
 
-  > Why? Function declarations are named, so they're easier to identify in call stacks. Also, the whole body of a function declaration is hoisted, whereas only the reference of a function expression is hoisted. This rule makes it possible to always use [Arrow Functions](#arrow-functions) in place of function expressions.
+  > Чому? Function declarations are named, so they're easier to identify in call stacks. Also, the whole body of a function declaration is hoisted, whereas only the reference of a function expression is hoisted. This rule makes it possible to always use [Arrow Functions](#arrow-functions) in place of function expressions.
 
     ```javascript
     // bad
@@ -509,7 +509,7 @@
   <a name="es6-rest"></a>
   - [7.6](#7.6) <a name='7.6'></a> Never use `arguments`, opt to use rest syntax `...` instead.
 
-  > Why? `...` is explicit about which arguments you want pulled. Plus rest arguments are a real Array and not Array-like like `arguments`.
+  > Чому? `...` is explicit about which arguments you want pulled. Plus rest arguments are a real Array and not Array-like like `arguments`.
 
     ```javascript
     // bad
@@ -553,7 +553,7 @@
 
   - [7.8](#7.8) <a name='7.8'></a> Avoid side effects with default parameters
 
-  > Why? They are confusing to reason about.
+  > Чому? They are confusing to reason about.
 
   ```javascript
   var b = 1;
@@ -569,7 +569,7 @@
 
 - [7.9](#7.9) <a name='7.9'></a> Never use the Function constructor to create a new function.
 
-  > Why? Creating a function in this way evaluates a string similarly to eval(), which opens vulnerabilities.
+  > Чому? Creating a function in this way evaluates a string similarly to eval(), which opens vulnerabilities.
 
   ```javascript
   // bad
@@ -579,15 +579,15 @@
   var subtract = Function('a', 'b', 'return a - b');
   ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 ## Arrow Functions
 
   - [8.1](#8.1) <a name='8.1'></a> When you must use function expressions (as when passing an anonymous function), use arrow function notation.
 
-  > Why? It creates a version of the function that executes in the context of `this`, which is usually what you want, and is a more concise syntax.
+  > Чому? It creates a version of the function that executes in the context of `this`, which is usually what you want, and is a more concise syntax.
 
-  > Why not? If you have a fairly complicated function, you might move that logic out into its own function declaration.
+  > Чому not? If you have a fairly complicated function, you might move that logic out into its own function declaration.
 
     ```javascript
     // bad
@@ -603,9 +603,9 @@
 
   - [8.2](#8.2) <a name='8.2'></a> If the function body fits on one line and there is only a single argument, feel free to omit the braces and parentheses, and use the implicit return. Otherwise, add the parentheses, braces, and use a `return` statement.
 
-  > Why? Syntactic sugar. It reads well when multiple functions are chained together.
+  > Чому? Syntactic sugar. It reads well when multiple functions are chained together.
 
-  > Why not? If you plan on returning an object.
+  > Чому not? If you plan on returning an object.
 
     ```javascript
     // good
@@ -617,14 +617,14 @@
     }, 0);
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 
 ## Constructors
 
   - [9.1](#9.1) <a name='9.1'></a> Always use `class`. Avoid manipulating `prototype` directly.
 
-  > Why? `class` syntax is more concise and easier to reason about.
+  > Чому? `class` syntax is more concise and easier to reason about.
 
     ```javascript
     // bad
@@ -653,7 +653,7 @@
 
   - [9.2](#9.2) <a name='9.2'></a> Use `extends` for inheritance.
 
-  > Why? It is a built-in way to inherit prototype functionality without breaking `instanceof`.
+  > Чому? It is a built-in way to inherit prototype functionality without breaking `instanceof`.
 
     ```javascript
     // bad
@@ -729,14 +729,14 @@
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 
 ## Modules
 
   - [10.1](#10.1) <a name='10.1'></a> Always use modules (`import`/`export`) over a non-standard module system. You can always transpile to your preferred module system.
 
-  > Why? Modules are the future, let's start using the future now.
+  > Чому? Modules are the future, let's start using the future now.
 
     ```javascript
     // bad
@@ -754,7 +754,7 @@
 
   - [10.2](#10.2) <a name='10.2'></a> Do not use wildcard imports.
 
-  > Why? This makes sure you have a single default export.
+  > Чому? This makes sure you have a single default export.
 
     ```javascript
     // bad
@@ -766,7 +766,7 @@
 
   - [10.3](#10.3) <a name='10.3'></a>And do not export directly from an import.
 
-  > Why? Although the one-liner is concise, having one clear way to import and one clear way to export makes things consistent.
+  > Чому? Although the one-liner is concise, having one clear way to import and one clear way to export makes things consistent.
 
     ```javascript
     // bad
@@ -779,13 +779,13 @@
     export default es6;
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 ## Iterators and Generators
 
   - [11.1](#11.1) <a name='11.1'></a> Don't use iterators. Prefer JavaScript's higher-order functions like `map()` and `reduce()` instead of loops like `for-of`.
 
-  > Why? This enforces our immutable rule. Dealing with pure functions that return values is easier to reason about than side-effects.
+  > Чому? This enforces our immutable rule. Dealing with pure functions that return values is easier to reason about than side-effects.
 
     ```javascript
     const numbers = [1, 2, 3, 4, 5];
@@ -810,9 +810,9 @@
 
   - [11.2](#11.2) <a name='11.2'></a> Don't use generators for now.
 
-  > Why? They don't transpile well to ES5.
+  > Чому? They don't transpile well to ES5.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 
 ## Properties
@@ -847,7 +847,7 @@
     const isJedi = getProp('jedi');
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 
 ## Variables
@@ -864,7 +864,7 @@
 
   - [13.2](#13.2) <a name='13.2'></a> Use one `const` declaration per variable.
 
-    > Why? It's easier to add new variable declarations this way, and you never have to worry about swapping out a `;` for a `,` or introducing punctuation-only diffs.
+    > Чому? It's easier to add new variable declarations this way, and you never have to worry about swapping out a `;` for a `,` or introducing punctuation-only diffs.
 
     ```javascript
     // bad
@@ -886,7 +886,7 @@
 
   - [13.3](#13.3) <a name='13.3'></a> Group all your `const`s and then group all your `let`s.
 
-  > Why? This is helpful when later on you might need to assign a variable depending on one of the previous assigned variables.
+  > Чому? This is helpful when later on you might need to assign a variable depending on one of the previous assigned variables.
 
     ```javascript
     // bad
@@ -911,7 +911,7 @@
 
   - [13.4](#13.4) <a name='13.4'></a> Assign variables where you need them, but place them in a reasonable place.
 
-  > Why? `let` and `const` are block scoped and not function scoped.
+  > Чому? `let` and `const` are block scoped and not function scoped.
 
     ```javascript
     // good
@@ -956,12 +956,12 @@
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 
 ## Hoisting
 
-  - [14.1](#14.1) <a name='14.1'></a> `var` declarations get hoisted to the top of their scope, their assignment does not. `const` and `let` declarations are blessed with a new concept called [Temporal Dead Zones (TDZ)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let). It's important to know why [typeof is no longer safe](http://es-discourse.com/t/why-typeof-is-no-longer-safe/15).
+  - [14.1](#14.1) <a name='14.1'></a> `var` declarations get hoisted to the top of their scope, their assignment does not. `const` and `let` declarations are blessed with a new concept called [Temporal Dead Zones (TDZ)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let). It's important to know Чому [typeof is no longer safe](http://es-discourse.com/t/Чому-typeof-is-no-longer-safe/15).
 
     ```javascript
     // we know this wouldn't work (assuming there
@@ -1052,7 +1052,7 @@
 
   - For more information refer to [JavaScript Scoping & Hoisting](http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting) by [Ben Cherry](http://www.adequatelygood.com/).
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 
 ## Comparison Operators & Equality
@@ -1100,7 +1100,7 @@
 
   - [15.4](#15.4) <a name='15.4'></a> For more information see [Truth Equality and JavaScript](http://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/#more-2108) by Angus Croll.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 
 ## Blocks
@@ -1152,7 +1152,7 @@
     ```
 
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 
 ## Comments
@@ -1247,7 +1247,7 @@
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 
 ## Whitespace
@@ -1453,7 +1453,7 @@
     ```
 
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 ## Commas
 
@@ -1493,7 +1493,7 @@
 
   - [19.2](#19.2) <a name='19.2'></a> Additional trailing comma: **Yup.**
 
-  > Why? This leads to cleaner git diffs. Also, transpilers like Babel will remove the additional trailing comma in the transpiled code which means you don't have to worry about the [trailing comma problem](es5/README.md#commas) in legacy browsers.
+  > Чому? This leads to cleaner git diffs. Also, transpilers like Babel will remove the additional trailing comma in the transpiled code which means you don't have to worry about the [trailing comma problem](es5/README.md#commas) in legacy browsers.
 
     ```javascript
     // bad - git diff without trailing comma
@@ -1534,7 +1534,7 @@
     ];
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 
 ## Semicolons
@@ -1563,7 +1563,7 @@
 
     [Read more](http://stackoverflow.com/a/7365214/1712802).
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 
 ## Type Casting & Coercion
@@ -1605,7 +1605,7 @@
     const val = parseInt(inputValue, 10);
     ```
 
-  - [21.4](#21.4) <a name='21.4'></a> If for whatever reason you are doing something wild and `parseInt` is your bottleneck and need to use Bitshift for [performance reasons](http://jsperf.com/coercion-vs-casting/3), leave a comment explaining why and what you're doing.
+  - [21.4](#21.4) <a name='21.4'></a> If for whatever reason you are doing something wild and `parseInt` is your bottleneck and need to use Bitshift for [Продуктивність reasons](http://jsperf.com/coercion-vs-casting/3), leave a comment explaining Чому and what you're doing.
 
     ```javascript
     // good
@@ -1640,7 +1640,7 @@
     const hasAge = !!age;
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 
 ## Naming Conventions
@@ -1774,7 +1774,7 @@
     ```
 
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 
 ## Accessors
@@ -1829,10 +1829,10 @@
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 
-## Events
+## Події
 
   - [24.1](#24.1) <a name='24.1'></a> When attaching data payloads to events (whether DOM events or something more proprietary like Backbone events), pass a hash instead of a raw value. This allows a subsequent contributor to add more data to the event payload without finding and updating every handler for the event. For example, instead of:
 
@@ -1860,7 +1860,7 @@
     });
     ```
 
-  **[⬆ back to top](#table-of-contents)**
+  **[⬆ Нагору](#table-of-contents)**
 
 
 ## jQuery
@@ -1922,16 +1922,16 @@
     $sidebar.find('ul').hide();
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 
-## ECMAScript 5 Compatibility
+## Сумісність з ECMAScript 5
 
   - [26.1](#26.1) <a name='26.1'></a> Refer to [Kangax](https://twitter.com/kangax/)'s ES5 [compatibility table](http://kangax.github.com/es5-compat-table/).
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
-## ECMAScript 6 Styles
+## Стилі ECMAScript 6
 
   - [27.1](#27.1) <a name='27.1'></a> This is a collection of links to the various es6 features.
 
@@ -1942,16 +1942,16 @@
 1. [Object Computed Properties](#es6-computed-properties)
 1. [Template Strings](#es6-template-literals)
 1. [Destructuring](#destructuring)
-1. [Default Parameters](#es6-default-parameters)
+1. [Стандартні Параметри](#es6-default-parameters)
 1. [Rest](#es6-rest)
 1. [Array Spreads](#es6-array-spreads)
 1. [Let and Const](#references)
-1. [Iterators and Generators](#iterators-and-generators)
-1. [Modules](#modules)
+1. [Ітератори і Генератори](#iterators-and-generators)
+1. [Модулі](#modules)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
-## Testing
+## Тестування
 
   - [28.1](#28.1) <a name='28.1'></a> **Yup.**
 
@@ -1961,12 +1961,12 @@
     }
     ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 
-## Performance
+## Продуктивність
 
-  - [On Layout & Web Performance](http://kellegous.com/j/2013/01/26/layout-performance/)
+  - [On Layout & Web Продуктивність](http://kellegous.com/j/2013/01/26/layout-Продуктивність/)
   - [String vs Array Concat](http://jsperf.com/string-vs-array-concat/2)
   - [Try/Catch Cost In a Loop](http://jsperf.com/try-catch-in-loop-cost)
   - [Bang Function](http://jsperf.com/bang-function)
@@ -1975,43 +1975,43 @@
   - [Long String Concatenation](http://jsperf.com/ya-string-concat)
   - Loading...
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 
-## Resources
+## Ресурси
 
-**Learning ES6**
+**Навчання ES6**
 
   - [Draft ECMA 2015 (ES6) Spec](https://people.mozilla.org/~jorendorff/es6-draft.html)
   - [ExploringJS](http://exploringjs.com/)
   - [ES6 Compatibility Table](https://kangax.github.io/compat-table/es6/)
   - [Comprehensive Overview of ES6 Features](http://es6-features.org/)
 
-**Read This**
+**Прочитайте це**
 
   - [Standard ECMA-262](http://www.ecma-international.org/ecma-262/6.0/index.html)
 
-**Tools**
+**Інструменти**
 
   - Code Style Linters
     + [ESlint](http://eslint.org/) - [Airbnb Style .eslintrc](https://github.com/airbnb/javascript/blob/master/linters/.eslintrc)
     + [JSHint](http://www.jshint.com/) - [Airbnb Style .jshintrc](https://github.com/airbnb/javascript/blob/master/linters/jshintrc)
     + [JSCS](https://github.com/jscs-dev/node-jscs) - [Airbnb Style Preset](https://github.com/jscs-dev/node-jscs/blob/master/presets/airbnb.json)
 
-**Other Style Guides**
+**Інші Гайди Стилів**
 
   - [Google JavaScript Style Guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml)
   - [jQuery Core Style Guidelines](http://docs.jquery.com/JQuery_Core_Style_Guidelines)
   - [Principles of Writing Consistent, Idiomatic JavaScript](https://github.com/rwldrn/idiomatic.js/)
 
-**Other Styles**
+**Інші Стилі**
 
   - [Naming this in nested functions](https://gist.github.com/4135065) - Christian Johansen
   - [Conditional Callbacks](https://github.com/airbnb/javascript/issues/52) - Ross Allen
   - [Popular JavaScript Coding Conventions on Github](http://sideeffect.kr/popularconvention/#javascript) - JeongHoon Byun
   - [Multiple var statements in JavaScript, not superfluous](http://benalman.com/news/2012/05/multiple-var-statements-javascript/) - Ben Alman
 
-**Further Reading**
+**Подальше Читання**
 
   - [Understanding JavaScript Closures](http://javascriptweblog.wordpress.com/2010/10/25/understanding-javascript-closures/) - Angus Croll
   - [Basic JavaScript for the impatient programmer](http://www.2ality.com/2013/06/basic-javascript.html) - Dr. Axel Rauschmayer
@@ -2019,12 +2019,12 @@
   - [ES6 Features](https://github.com/lukehoban/es6features) - Luke Hoban
   - [Frontend Guidelines](https://github.com/bendc/frontend-guidelines) - Benjamin De Cock
 
-**Books**
+**Книги**
 
   - [JavaScript: The Good Parts](http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742) - Douglas Crockford
   - [JavaScript Patterns](http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752) - Stoyan Stefanov
   - [Pro JavaScript Design Patterns](http://www.amazon.com/JavaScript-Design-Patterns-Recipes-Problem-Solution/dp/159059908X)  - Ross Harmes and Dustin Diaz
-  - [High Performance Web Sites: Essential Knowledge for Front-End Engineers](http://www.amazon.com/High-Performance-Web-Sites-Essential/dp/0596529309) - Steve Souders
+  - [High Продуктивність Web Sites: Essential Knowledge for Front-End Engineers](http://www.amazon.com/High-Продуктивність-Web-Sites-Essential/dp/0596529309) - Steve Souders
   - [Maintainable JavaScript](http://www.amazon.com/Maintainable-JavaScript-Nicholas-C-Zakas/dp/1449327680) - Nicholas C. Zakas
   - [JavaScript Web Applications](http://www.amazon.com/JavaScript-Web-Applications-Alex-MacCaw/dp/144930351X) - Alex MacCaw
   - [Pro JavaScript Techniques](http://www.amazon.com/Pro-JavaScript-Techniques-John-Resig/dp/1590597273) - John Resig
@@ -2038,7 +2038,7 @@
   - [Eloquent JavaScript](http://eloquentjavascript.net/) - Marijn Haverbeke
   - [You Don't Know JS: ES6 & Beyond](http://shop.oreilly.com/product/0636920033769.do) - Kyle Simpson
 
-**Blogs**
+**Блоги**
 
   - [DailyJS](http://dailyjs.com/)
   - [JavaScript Weekly](http://javascriptweekly.com/)
@@ -2052,14 +2052,14 @@
   - [Dustin Diaz](http://dustindiaz.com/)
   - [nettuts](http://net.tutsplus.com/?s=javascript)
 
-**Podcasts**
+**Подкасти**
 
   - [JavaScript Jabber](http://devchat.tv/js-jabber/)
 
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
-## In the Wild
+## В реальному житті
 
   This is a list of organizations that are using this style guide. Send us a pull request or open an issue and we'll add you to the list.
 
@@ -2114,9 +2114,9 @@
   - **Zillow**: [zillow/javascript](https://github.com/zillow/javascript)
   - **ZocDoc**: [ZocDoc/javascript](https://github.com/ZocDoc/javascript)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
-## Translation
+## Переклади
 
   This style guide is also available in other languages:
 
@@ -2135,20 +2135,20 @@
   - ![es](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Spain.png) **Spanish**: [paolocarrasco/javascript-style-guide](https://github.com/paolocarrasco/javascript-style-guide)
   - ![th](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Thailand.png) **Thai**: [lvarayut/javascript-style-guide](https://github.com/lvarayut/javascript-style-guide)
 
-## The JavaScript Style Guide Guide
+## Гайд по написанню гайду стилю по JavaScript
 
   - [Reference](https://github.com/airbnb/javascript/wiki/The-JavaScript-Style-Guide-Guide)
 
-## Chat With Us About JavaScript
+## Чат з нами про Javascript
 
   - Find us on [gitter](https://gitter.im/airbnb/javascript).
 
-## Contributors
+## Вкладники
 
   - [View Contributors](https://github.com/airbnb/javascript/graphs/contributors)
 
 
-## License
+## Ліцензія
 
 (The MIT License)
 
@@ -2173,6 +2173,6 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ Нагору](#table-of-contents)**
 
 # };
