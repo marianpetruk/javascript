@@ -78,7 +78,7 @@
     console.log(foo[0], bar[0]); // => 9, 9
     ```
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 ## Посилання
 
@@ -126,7 +126,7 @@
     console.log(b); // ReferenceError
     ```
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 ## Objects
 
@@ -272,7 +272,7 @@
     };
     ```
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 ## Arrays
 
@@ -321,7 +321,7 @@
     const nodes = Array.from(foo);
     ```
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 ## Destructuring
 
@@ -388,7 +388,7 @@
     ```
 
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 ## Strings
 
@@ -444,7 +444,7 @@
     ```
   - [6.5](#6.5) <a name='6.5'></a> Never use eval() on a string, it opens too many vulnerabilities.
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 
 ## Functions
@@ -579,7 +579,7 @@
   var subtract = Function('a', 'b', 'return a - b');
   ```
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 ## Arrow Functions
 
@@ -617,7 +617,7 @@
     }, 0);
     ```
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 
 ## Constructors
@@ -729,7 +729,7 @@
     }
     ```
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 
 ## Modules
@@ -779,7 +779,7 @@
     export default es6;
     ```
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 ## Iterators and Generators
 
@@ -812,7 +812,7 @@
 
   > Чому? They don't transpile well to ES5.
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 
 ## Properties
@@ -847,7 +847,7 @@
     const isJedi = getProp('jedi');
     ```
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 
 ## Variables
@@ -956,7 +956,7 @@
     }
     ```
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 
 ## Hoisting
@@ -1052,7 +1052,7 @@
 
   - For more information refer to [JavaScript Scoping & Hoisting](http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting) by [Ben Cherry](http://www.adequatelygood.com/).
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 
 ## Comparison Operators & Equality
@@ -1100,7 +1100,7 @@
 
   - [15.4](#15.4) <a name='15.4'></a> For more information see [Truth Equality and JavaScript](http://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/#more-2108) by Angus Croll.
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 
 ## Blocks
@@ -1152,7 +1152,7 @@
     ```
 
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 
 ## Comments
@@ -1247,7 +1247,7 @@
     }
     ```
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 
 ## Whitespace
@@ -1453,7 +1453,7 @@
     ```
 
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 ## Commas
 
@@ -1534,7 +1534,7 @@
     ];
     ```
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 
 ## Semicolons
@@ -1563,7 +1563,7 @@
 
     [Read more](http://stackoverflow.com/a/7365214/1712802).
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 
 ## Type Casting & Coercion
@@ -1640,7 +1640,7 @@
     const hasAge = !!age;
     ```
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 
 ## Naming Conventions
@@ -1774,7 +1774,7 @@
     ```
 
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 
 ## Accessors
@@ -1829,7 +1829,7 @@
     }
     ```
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 
 ## Події
@@ -1860,7 +1860,7 @@
     });
     ```
 
-  **[⬆ Нагору](#table-of-contents)**
+  **[⬆ Нагору](#Зміст)**
 
 
 ## jQuery
@@ -1922,14 +1922,14 @@
     $sidebar.find('ul').hide();
     ```
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 
 ## Сумісність з ECMAScript 5
 
   - [26.1](#26.1) <a name='26.1'></a> Refer to [Kangax](https://twitter.com/kangax/)'s ES5 [compatibility table](http://kangax.github.com/es5-compat-table/).
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 ## Стилі ECMAScript 6
 
@@ -1949,7 +1949,7 @@
 1. [Ітератори і Генератори](#iterators-and-generators)
 1. [Модулі](#modules)
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 ## Тестування
 
@@ -1961,7 +1961,7 @@
     }
     ```
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 
 ## Продуктивність
@@ -1975,7 +1975,7 @@
   - [Long String Concatenation](http://jsperf.com/ya-string-concat)
   - Loading...
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 
 ## Ресурси
@@ -2057,7 +2057,7 @@
   - [JavaScript Jabber](http://devchat.tv/js-jabber/)
 
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 ## В реальному житті
 
@@ -2114,7 +2114,7 @@
   - **Zillow**: [zillow/javascript](https://github.com/zillow/javascript)
   - **ZocDoc**: [ZocDoc/javascript](https://github.com/ZocDoc/javascript)
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 ## Переклади
 
@@ -2173,6 +2173,6 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-**[⬆ Нагору](#table-of-contents)**
+**[⬆ Нагору](#Зміст)**
 
 # };
